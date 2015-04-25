@@ -5,11 +5,18 @@ if 0 {
 	
 	Playground:
 		puts [_stringPad "My String" 4]
-		puts [_stringPad "My String" 4 ]
+		>> "    My String"
+		puts [_stringPad "12346" 4 "0" end]
+		>> "123460000"
 	
 	Change Log:
 	2015-04-01 Todd Horst
 		Initial version
+		
+	TODO:
+	-Length - Either this function or another should
+		allow you to dictate the ideal length (good for
+		MRN)
 }
 #
 

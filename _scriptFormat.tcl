@@ -2,6 +2,10 @@ if 0 {
 	About
 		Pretty print a tcl script. Recommended mass comment as if 0 {}.
 	
+	Dependencies
+	_stringPad
+	_stringCount
+	
 	History
 		I wrote this initially in c#, and would ftp the file to a webserver,
 		format it, and then ftp it back. With our new server we have web
@@ -113,7 +117,7 @@ proc _scriptFormat {script {options ""}} {
 		# Trim new lines
 		set line [string trim $line]
 		
-		# Replace tabs with spaces, usefule for comments with lots of tabs
+		# Replace tabs with spaces, useful for comments with lots of tabs
 		set line [string map {\t $tabStr} $line]
 		
 		# If this line starts with a comment, ignore any depth change.
@@ -156,7 +160,7 @@ proc _scriptFormat {script {options ""}} {
 		set depth $newdepth
 	}
 
-	# Write	
+	# Write	out the formated file
 	set fl [open $script w]
 	puts -nonewline $fl [join $newData "\n"]
 	close $fl

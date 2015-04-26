@@ -2,9 +2,13 @@ if 0 {
 	About
 		Pretty print a tcl script. Recommended mass comment as if 0 {}.
 	
+	Links
+		http://wiki.tcl.tk/41387
+		https://github.com/thorst/TCL-Tools
+	
 	Dependencies
-	_stringPad
-	_stringCount
+		_stringPad
+		_stringCount
 	
 	History
 		I wrote this initially in c#, and would ftp the file to a webserver,
